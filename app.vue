@@ -1,4 +1,8 @@
 <script setup>
+    useHead({
+        title: "SkinArtistWeb"
+    });
+    
     import { createCanvas, loadImage } from 'canvas';
     import JSZip from 'jszip';
 
