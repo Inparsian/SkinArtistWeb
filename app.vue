@@ -11,11 +11,11 @@
         BASE_SKIN: 'baseSkin',
     };
 
-    const art = ref(null),
-        artImage = ref(null),
-        baseSkin = ref(null),
+    const art = ref(undefined),
+        artImage = ref(undefined),
+        baseSkin = ref(undefined),
         baseSkinHeight = ref(32),
-        baseSkinImage = ref(null);
+        baseSkinImage = ref(undefined);
 
     const onFileChange = (file, type) => {
         const reader = new FileReader();
