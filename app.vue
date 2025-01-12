@@ -10,7 +10,7 @@
     const art = ref(null),
         artImage = ref(null),
         baseSkin = ref(null),
-        baseSkinHeight = ref(0),
+        baseSkinHeight = ref(32),
         baseSkinImage = ref(null);
 
     const onFileChange = (file, type) => {
@@ -51,11 +51,11 @@
         let i = 1;
         for (let y = 2; y >= 0; y--) {
             for (let x = 8; x >= 0; x--) {
-                const canvas = createCanvas(64, baseSkinHeight.value || 64),
+                const canvas = createCanvas(64, baseSkinHeight.value),
                     ctx = canvas.getContext('2d');
 
                 const baseSkin = await loadImage(baseSkinImage.value || useDefaultBaseSkin());
-                ctx.drawImage(baseSkin, 0, 0, 64, baseSkinHeight.value || 64);
+                ctx.drawImage(baseSkin, 0, 0, 64, baseSkinHeight.value);
 
                 // Make sure nothing's on the face second layer
                 const faceSecondLayerData = ctx.getImageData(40, 8, 8, 8).data;
