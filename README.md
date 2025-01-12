@@ -1,5 +1,5 @@
 # SkinArtistWeb
-SkinArtist, but now on the web, and easier to use. This web application automates the process of generating NameMC skin art.
+SkinArtist, but now on the web, and easier to use. This web application automates the process of making NameMC skin art.
 
 ## How to use
 1. Go to [the website](https://skinartistweb.inpr.sn).
