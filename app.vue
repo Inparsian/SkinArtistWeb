@@ -135,6 +135,8 @@
             >
                 Generate
             </button>
+
+            <a href="https://github.com/Inparsian/SkinArtistWeb" class="mt-4 text-xs sm:text-sm font-light underline transition-colors text-stone-300 hover:text-stone-100">View on GitHub</a>
         </div>
     </div>
 </template>
