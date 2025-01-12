@@ -12,6 +12,7 @@
     const art = ref(null),
         artImage = ref(null),
         baseSkin = ref(null),
+        baseSkinHeight = ref(0),
         baseSkinImage = ref(null);
 
     const onFileChange = (file, type) => {
@@ -33,6 +34,7 @@
                         alert('Base skin must be 64x32 or 64x64 pixels');
                     } else {
                         baseSkin.value = file;
+                        baseSkinHeight.value = image.height;
                         baseSkinImage.value = e.target.result;
                     }
                 }
@@ -51,11 +53,11 @@
         let i = 1;
         for (let y = 2; y >= 0; y--) {
             for (let x = 8; x >= 0; x--) {
-                const canvas = createCanvas(64, 32),
+                const canvas = createCanvas(64, baseSkinHeight.value || 64),
                     ctx = canvas.getContext('2d');
 
                 const baseSkin = await loadImage(baseSkinImage.value || defaultBaseSkin);
-                ctx.drawImage(baseSkin, 0, 0, 64, 32);
+                ctx.drawImage(baseSkin, 0, 0, 64, baseSkinHeight.value || 64);
 
                 // Make sure nothing's on the face second layer
                 const faceSecondLayerData = ctx.getImageData(40, 8, 8, 8).data;
