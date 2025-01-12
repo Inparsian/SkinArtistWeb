@@ -38,6 +38,10 @@
 
         reader.readAsDataURL(file);
     };
+
+    const generate = () => {
+        console.log('Generate');
+    };
 </script>
 
 <template>
@@ -62,7 +66,13 @@
                 </div>
             </div>
 
-            <button class="transition-colors bg-gray-600 hover:bg-gray-700 active:bg-gray-500 p-3 rounded-lg" :disabled="!art || !baseSkin">Generate</button>
+            <button 
+                class="transition-colors disabled:cursor-not-allowed disabled:opacity-50 bg-gray-600 enabled:hover:bg-gray-700 enabled:active:bg-gray-500 p-3 rounded-lg" 
+                :disabled="!art"
+                @click="generate"
+            >
+                Generate
+            </button>
         </div>
     </div>
 </template>
