@@ -68,7 +68,7 @@
                 const template = await loadImage(artImage.value);
                 ctx.drawImage(template, 8 * x, 8 * y, 8, 8, 8, 8, 8, 8);
 
-                // Generate random noise for the skin to be unique
+                // Generate random noise for the skin to be unique, NameMC doesn't like duplicate skins
                 const makeNoise = (width, height) => {
                     const noise = ctx.createImageData(width, height);
                 
