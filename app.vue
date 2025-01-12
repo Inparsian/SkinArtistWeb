@@ -55,13 +55,13 @@
             <div class="flex flex-wrap justify-center gap-4 my-4">
                 <div class="flex flex-col bg-stone-700 rounded-lg p-4 items-center gap-2">
                     <h2 class="text-lg font-bold">Art</h2>
-                    <input class="bg-stone-600 p-2 rounded-md w-full" type="file" @change="onFileChange($event.target.files[0], Files.ART)">
+                    <input class="file-select bg-stone-600 p-2 rounded-md w-full" type="file" @change="onFileChange($event.target.files[0], Files.ART)">
                     <img v-if="artImage" :src="artImage" class="w-[216px] pixelated" />
                 </div>
 
                 <div class="flex flex-col bg-stone-700 rounded-lg p-4 items-center gap-2">
                     <h2 class="text-lg font-bold">Base Skin <span class="font-normal text-stone-500">(Optional)</span></h2>
-                    <input class="bg-stone-600 p-2 rounded-md w-full" type="file" @change="onFileChange($event.target.files[0], Files.BASE_SKIN)">
+                    <input class="file-select bg-stone-600 p-2 rounded-md w-full" type="file" @change="onFileChange($event.target.files[0], Files.BASE_SKIN)">
                     <img v-if="baseSkinImage" :src="baseSkinImage" class="w-[192px] pixelated" />
                 </div>
             </div>
@@ -76,15 +76,3 @@
         </div>
     </div>
 </template>
-
-<style>
-    .pixelated {
-        image-rendering: optimizeSpeed;
-        image-rendering: -moz-crisp-edges;
-        image-rendering: -o-crisp-edges;
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: pixelated;
-        image-rendering: optimize-contrast;
-        -ms-interpolation-mode: nearest-neighbor;
-    }
-</style>
