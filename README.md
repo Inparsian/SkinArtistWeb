@@ -1,10 +1,10 @@
 # SkinArtistWeb
-SkinArtist, but now on the web, and easier to use. This web application automates the process of generating NameMC skin art.
+SkinArtist, but now on the web, and easier to use. This web application automates the process of making NameMC skin art.
 
 ## How to use
 1. Go to [the website](https://skinartistweb.inpr.sn).
 2. Upload an image that is exactly 72x24 pixels.
-3 (optional). You may upload the skin that you want to use as a base. A completely black skin will be used by default.
+3. (optional) You may upload the skin that you want to use as a base. A completely black skin will be used by default.
 4. Click the "Generate" button.
 
 ## Applying the skins
