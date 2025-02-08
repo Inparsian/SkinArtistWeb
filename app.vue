@@ -52,7 +52,6 @@
         const dataURIs = [];
 
         // Loop backwards, skins are sorted from most to least recent
-        let i = 1;
         for (let y = 2; y >= 0; y--) {
             for (let x = 8; x >= 0; x--) {
                 const canvas = createCanvas(64, baseSkinHeight.value),
@@ -87,7 +86,6 @@
             
                 ctx.putImageData(makeNoise(2, 2), 19, 3);
 
-                // Image is done, append it to the dataURIs array
                 const image = canvas.toDataURL('image/png');
                 dataURIs.push(image);
             }
